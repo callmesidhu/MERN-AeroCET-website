@@ -1,5 +1,5 @@
 import './Gallery.css';
-import dummy from '../assets/images/sample picture.jpeg';
+import dummy from '../assets/images/sample.jpeg';
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router-dom';

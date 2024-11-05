@@ -1,19 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
 
-App{
+App {
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   background-color: #110011;
   color: white;
-  
 }
-h1{
+
+/* Custom Scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 4px; /* Set the thickness of the scrollbar */
+  background-color: #11001100; /* Background of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 142, 3); /* Color of the scrollbar */
+  border-radius: 10px; /* Rounded edges of the scrollbar */
+}
+
+
+/* Custom Scrollbar for Firefox */
+body {
+  scrollbar-width: thin; /* Make scrollbar thinner */
+  scrollbar-color: rgb(255, 115, 0) #eaeaea00; /* Set scrollbar thumb and track color */
+}
+
+h1 {
   font-family: "Sancreek", serif;
   font-weight: 400;
   font-style: normal;
-  
 }

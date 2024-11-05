@@ -8,6 +8,6 @@ export default function Teams() {
     navigate('/');
   };
   return (
-    <div>Teams</div>
+    <div className="divbg">Teams</div>
   )
 }
