@@ -3,10 +3,16 @@ import './Team.css';
 import plane from '../assets/images/vectorPlane.png';
 import drone from '../assets/images/vectorDrone.png';
 import clsx from 'clsx';
+import { useNavigate } from 'react-router-dom';
 
 export default function Team() {
   const [isActive, setIsActive] = useState(false);
   const teamRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
+
+  const goTo = () => {
+    navigate('/teams');
+  };
 
   // Intersection Observer logic
   useEffect(() => {
@@ -30,6 +36,7 @@ export default function Team() {
 
   return (
     <div
+      onClick={goTo}
       ref={teamRef}
       className={clsx(
         "p-24 w-full shad lg:m-36 md:my-64 items-center lg:h-[500px] md:h-[600px] sm:h-[600px] flex-1 flex justify-around flex-col",
