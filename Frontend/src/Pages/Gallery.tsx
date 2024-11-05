@@ -1,33 +1,15 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import dummy from '../assets/images/sample.jpeg';
 import logo from '../assets/AeroCET-logo.png';
 
 export default function Gallery() {
   const navigate = useNavigate();
-  const [showTopButton, setShowTopButton] = useState(false);
+
 
   const goTo = () => {
     navigate('/');
   };
 
-  // Show "Go to Top" button when scrolled down
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowTopButton(window.scrollY > 100); // Show button after 100px scroll
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div className="p-8 relative flex flex-col items-center overflow-y-auto">
@@ -38,6 +20,11 @@ export default function Gallery() {
       >
         <img src={logo} className="h-32 w-auto" alt="logo"/> 
       </button>
+
+      <h1 className="text-2xl font-bold text-white mb-4">Gallery</h1>
+      <p className="text-white text-center mb-4">
+      Every picture has a story to tell..!
+      </p>
       
       {/* Scrollable Gallery Container */}
       <div className="max-h-[80vh] grid gap-4 
@@ -55,16 +42,7 @@ export default function Gallery() {
         ))}
       </div>
 
-      {/* "Go to Top" Button */}
-      {showTopButton && (
-        <button 
-          onClick={scrollToTop} 
-          className="fixed bottom-5 right-5 p-3 bg-orange-500 text-white rounded-full shadow-lg hover:bg-orange-800"
-          aria-label="Go to top"
-        >
-          <FontAwesomeIcon icon={faArrowUp} />
-        </button>
-      )}
+
     </div>
   );
 }
