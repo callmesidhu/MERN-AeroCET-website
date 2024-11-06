@@ -18,7 +18,7 @@ export default function Gallery() {
         onClick={goTo} 
         className="mb-4 flex justify-center items-center"
       >
-        <img src={logo} className="h-32 w-auto" alt="logo"/> 
+        <img src={logo} className="h-32 w-auto transform transition duration-400 hover:scale-110" alt="logo"/> 
       </button>
 
       <h1 className="text-2xl font-bold text-white mb-4">Gallery</h1>
