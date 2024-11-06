@@ -43,6 +43,7 @@ export default function Gallery() {
         { 'opacity-100 translate-y-0 transition-all duration-1000 delay-200 ease-in-out': isActive } // Visible state
       )}
     >
+    
       {/* First Scrollable Column */}
       <div className={clsx(
         "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] scroll-up items-center justify-around gap-3",
