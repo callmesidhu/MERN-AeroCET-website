@@ -1,141 +1,141 @@
 [
         {
           "id": 1,
-          "name": "Bhavya",
-          "role": "Developer",
-          "imgURL": "../../Data/images/Bhavya.jpg"
+          "name": "Prof. Praveen A",
+          "role": "Staff Advisor",
+          "imgURL": "../../Data/images/prof_praveen.jpg"
         },
         {
           "id": 2,
-          "name": "Bob Johnson",
-          "role": "Designer",
-          "imgURL": "https://example.com/images/bob.jpg"
+          "name": "Adithya Gopal J S",
+          "role": "Caption",
+          "imgURL": "../../Data/images/adithya_gopal.jpg"
         },
         {
           "id": 3,
-          "name": "Carol Williams",
-          "role": "Project Manager",
-          "imgURL": "https://example.com/images/carol.jpg"
+          "name": "Rohan Rajeesh",
+          "role": "RC Plane Lead",
+          "imgURL": "../../Data/images/rohan_rajeesh.jpg"
         },
         {
           "id": 4,
-          "name": "David Brown",
-          "role": "Developer",
-          "imgURL": "https://example.com/images/david.jpg"
+          "name": "Sravan R",
+          "role": "Multi-Rotor Lead",
+          "imgURL": "../../Data/images/sravan_r.jpg"
         },
         {
           "id": 5,
-          "name": "Eve Davis",
-          "role": "Quality Assurance",
-          "imgURL": "https://example.com/images/eve.jpg"
+          "name": "Bhavya Raj M",
+          "role": "Team Manager",
+          "imgURL": "../../Data/images/bhavya_raj.jpg"
         },
         {
           "id": 6,
-          "name": "Frank Miller",
-          "role": "Developer",
-          "imgURL": "https://example.com/images/frank.jpg"
+          "name": "Vishnu C S",
+          "role": "Fabrication Head",
+          "imgURL": "../../Data/images/vishnu_cs.jpg"
         },
         {
           "id": 7,
-          "name": "Grace Wilson",
-          "role": "Designer",
-          "imgURL": "https://example.com/images/grace.jpg"
+          "name": "Deepak G",
+          "role": "Analysis R & D",
+          "imgURL": "../../Data/images/deepak_g.jpg"
         },
         {
           "id": 8,
-          "name": "Hank Moore",
-          "role": "Project Manager",
-          "imgURL": "https://example.com/images/hank.jpg"
+          "name": "Siddharth A S",
+          "role": "Technical R & D",
+          "imgURL": "../../Data/images/siddharth_as.jpg"
         },
         {
           "id": 9,
-          "name": "Ivy Taylor",
-          "role": "Developer",
-          "imgURL": "https://example.com/images/ivy.jpg"
+          "name": "Sivaprakash M",
+          "role": "Design Head",
+          "imgURL": "../../Data/images/sivaprakash_m.jpg"
         },
         {
           "id": 10,
-          "name": "Jack Anderson",
-          "role": "Quality Assurance",
-          "imgURL": "https://example.com/images/jack.jpg"
+          "name": "Abhijith K S",
+          "role": "Design Head",
+          "imgURL": "../../Data/images/abhijith_ks.jpg"
         },
         {
           "id": 11,
-          "name": "Karen Thomas",
-          "role": "Developer",
-          "imgURL": "https://example.com/images/karen.jpg"
+          "name": "Aravind M S",
+          "role": "Product Design",
+          "imgURL": "../../Data/images/aravind_ms.jpg"
         },
         {
           "id": 12,
-          "name": "Leo Jackson",
-          "role": "Designer",
-          "imgURL": "https://example.com/images/leo.jpg"
+          "name": "George K Binoj",
+          "role": "Technical Lead",
+          "imgURL": "../../Data/images/george_k_binoj.jpg"
         },
         {
           "id": 13,
-          "name": "Mia White",
-          "role": "Project Manager",
-          "imgURL": "https://example.com/images/mia.jpg"
+          "name": "Suparna R",
+          "role": "System & Control",
+          "imgURL": "../../Data/images/suparna_r.jpg"
         },
         {
           "id": 14,
-          "name": "Noah Harris",
-          "role": "Developer",
-          "imgURL": "https://example.com/images/noah.jpg"
+          "name": "Hrishikesh Rajeev",
+          "role": "Aerodynamics",
+          "imgURL": "../../Data/images/hrishikesh_rajeev.jpg"
         },
         {
           "id": 15,
-          "name": "Olivia Martin",
-          "role": "Quality Assurance",
-          "imgURL": "https://example.com/images/olivia.jpg"
+          "name": "Adhithya Krishnan",
+          "role": "Aerodynamics",
+          "imgURL": "../../Data/images/adhithya_krishnan.jpg"
         },
         {
           "id": 16,
-          "name": "Paul Lee",
-          "role": "Developer",
-          "imgURL": "https://example.com/images/paul.jpg"
+          "name": "Alan Mathew Babu",
+          "role": "Autonomous Drone",
+          "imgURL": "../../Data/images/alan_mathew.jpg"
         },
         {
           "id": 17,
-          "name": "Quinn Walker",
-          "role": "Designer",
-          "imgURL": "https://example.com/images/quinn.jpg"
+          "name": "Sarang S",
+          "role": "Autonomous Drone",
+          "imgURL": "../../Data/images/sarang_s.jpg"
         },
         {
           "id": 18,
-          "name": "Rachel Hall",
-          "role": "Project Manager",
-          "imgURL": "https://example.com/images/rachel.jpg"
+          "name": "Asher Mohan",
+          "role": "Documentation Head",
+          "imgURL": "../../Data/images/asher_mohan.jpg"
         },
         {
           "id": 19,
-          "name": "Sam King",
-          "role": "Developer",
-          "imgURL": "https://example.com/images/sam.jpg"
+          "name": "Pranoy Chandran",
+          "role": "Sponsorship Head & Event Manager",
+          "imgURL": "../../Data/images/pranoy_chandran.jpg"
         },
         {
           "id": 20,
-          "name": "Tina Wright",
-          "role": "Quality Assurance",
-          "imgURL": "https://example.com/images/tina.jpg"
+          "name": "Sreya Krishnan",
+          "role": "Sponsorship Head & Event Manager",
+          "imgURL": "../../Data/images/sreya_krishnan.jpg"
         },
         {
           "id": 21,
-          "name": "Uma Lopez",
-          "role": "Developer",
-          "imgURL": "https://example.com/images/uma.jpg"
+          "name": "Sadhika M P",
+          "role": "Treasurer",
+          "imgURL": "../../Data/images/sadhika_mp.jpg"
         },
         {
           "id": 22,
-          "name": "Vince Green",
-          "role": "Designer",
-          "imgURL": "https://example.com/images/vince.jpg"
+          "name": "Jonathan Joshy P",
+          "role": "Media Manager",
+          "imgURL": "../../Data/images/jonathan_joshy.jpg"
         },
         {
           "id": 23,
-          "name": "Wendy Hill",
-          "role": "Project Manager",
-          "imgURL": "https://example.com/images/wendy.jpg"
+          "name": "Adhiya B",
+          "role": "Media Manager",
+          "imgURL": "../../Data/images/adhiya_b.jpg"
         }
       ]
       

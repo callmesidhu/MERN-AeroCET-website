@@ -25,10 +25,10 @@ export default function Teams() {
       {/* Team Members */}
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
         {people.map((member) => (
-          <div key={member.id} className="bg-gray-800 p-4 rounded-xl">
-            <img src={member.imgURL || logo} className="" alt={member.name} />
-            <h2 className="text-lg font-semibold text-orange-500">{member.name}</h2>
-            <p className="text-white">Role: {member.role}</p>
+          <div key={member.id} className="bg-gray-800 p-4 rounded-xl transform transition duration-300 hover:scale-105">
+            <img src={member.imgURL || logo} className="rounded-lg" alt={member.name} />
+            <h2 className="text-lg font-semibold text-orange-500 text-center">{member.name}</h2>
+            <p className="text-white text-center">{member.role}</p>
           </div>
         ))}
       </div>
