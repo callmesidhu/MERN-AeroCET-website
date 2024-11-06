@@ -1,0 +1,141 @@
+[
+        {
+          "id": 1,
+          "name": "Bhavya",
+          "role": "Developer",
+          "imgURL": "../../Data/images/Bhavya.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Bob Johnson",
+          "role": "Designer",
+          "imgURL": "https://example.com/images/bob.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Carol Williams",
+          "role": "Project Manager",
+          "imgURL": "https://example.com/images/carol.jpg"
+        },
+        {
+          "id": 4,
+          "name": "David Brown",
+          "role": "Developer",
+          "imgURL": "https://example.com/images/david.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Eve Davis",
+          "role": "Quality Assurance",
+          "imgURL": "https://example.com/images/eve.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Frank Miller",
+          "role": "Developer",
+          "imgURL": "https://example.com/images/frank.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Grace Wilson",
+          "role": "Designer",
+          "imgURL": "https://example.com/images/grace.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Hank Moore",
+          "role": "Project Manager",
+          "imgURL": "https://example.com/images/hank.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Ivy Taylor",
+          "role": "Developer",
+          "imgURL": "https://example.com/images/ivy.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Jack Anderson",
+          "role": "Quality Assurance",
+          "imgURL": "https://example.com/images/jack.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Karen Thomas",
+          "role": "Developer",
+          "imgURL": "https://example.com/images/karen.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Leo Jackson",
+          "role": "Designer",
+          "imgURL": "https://example.com/images/leo.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Mia White",
+          "role": "Project Manager",
+          "imgURL": "https://example.com/images/mia.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Noah Harris",
+          "role": "Developer",
+          "imgURL": "https://example.com/images/noah.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Olivia Martin",
+          "role": "Quality Assurance",
+          "imgURL": "https://example.com/images/olivia.jpg"
+        },
+        {
+          "id": 16,
+          "name": "Paul Lee",
+          "role": "Developer",
+          "imgURL": "https://example.com/images/paul.jpg"
+        },
+        {
+          "id": 17,
+          "name": "Quinn Walker",
+          "role": "Designer",
+          "imgURL": "https://example.com/images/quinn.jpg"
+        },
+        {
+          "id": 18,
+          "name": "Rachel Hall",
+          "role": "Project Manager",
+          "imgURL": "https://example.com/images/rachel.jpg"
+        },
+        {
+          "id": 19,
+          "name": "Sam King",
+          "role": "Developer",
+          "imgURL": "https://example.com/images/sam.jpg"
+        },
+        {
+          "id": 20,
+          "name": "Tina Wright",
+          "role": "Quality Assurance",
+          "imgURL": "https://example.com/images/tina.jpg"
+        },
+        {
+          "id": 21,
+          "name": "Uma Lopez",
+          "role": "Developer",
+          "imgURL": "https://example.com/images/uma.jpg"
+        },
+        {
+          "id": 22,
+          "name": "Vince Green",
+          "role": "Designer",
+          "imgURL": "https://example.com/images/vince.jpg"
+        },
+        {
+          "id": 23,
+          "name": "Wendy Hill",
+          "role": "Project Manager",
+          "imgURL": "https://example.com/images/wendy.jpg"
+        }
+      ]
+      
