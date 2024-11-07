@@ -1,8 +1,9 @@
 const express = require('express');
-const router = express.Router();    
-        
+const path = require('path'); 
+const router = express.Router();
+
 router.get('/data', (req, res) => {
-        res.send('db data');
-      });
+    res.download(path.join(__dirname, '.././public/data/aerocet.pdf'));
+});
 
 module.exports = router;
