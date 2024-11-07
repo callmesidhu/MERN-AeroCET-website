@@ -1,0 +1,141 @@
+[
+        {
+          "id": 1,
+          "name": "Prof. Praveen A",
+          "role": "Staff Advisor",
+          "imgURL": "../../Data/images/prof_praveen.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Adithya Gopal J S",
+          "role": "Caption",
+          "imgURL": "../../Data/images/adithya_gopal.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Rohan Rajeesh",
+          "role": "RC Plane Lead",
+          "imgURL": "../../Data/images/rohan_rajeesh.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Sravan R",
+          "role": "Multi-Rotor Lead",
+          "imgURL": "../../Data/images/sravan_r.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Bhavya Raj M",
+          "role": "Team Manager",
+          "imgURL": "../../Data/images/bhavya_raj.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Vishnu C S",
+          "role": "Fabrication Head",
+          "imgURL": "../../Data/images/vishnu_cs.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Deepak G",
+          "role": "Analysis R & D",
+          "imgURL": "../../Data/images/deepak_g.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Siddharth A S",
+          "role": "Technical R & D",
+          "imgURL": "../../Data/images/siddharth_as.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Sivaprakash M",
+          "role": "Design Head",
+          "imgURL": "../../Data/images/sivaprakash_m.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Abhijith K S",
+          "role": "Design Head",
+          "imgURL": "../../Data/images/abhijith_ks.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Aravind M S",
+          "role": "Product Design",
+          "imgURL": "../../Data/images/aravind_ms.jpg"
+        },
+        {
+          "id": 12,
+          "name": "George K Binoj",
+          "role": "Technical Lead",
+          "imgURL": "../../Data/images/george_k_binoj.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Suparna R",
+          "role": "System & Control",
+          "imgURL": "../../Data/images/suparna_r.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Hrishikesh Rajeev",
+          "role": "Aerodynamics",
+          "imgURL": "../../Data/images/hrishikesh_rajeev.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Adhithya Krishnan",
+          "role": "Aerodynamics",
+          "imgURL": "../../Data/images/adhithya_krishnan.jpg"
+        },
+        {
+          "id": 16,
+          "name": "Alan Mathew Babu",
+          "role": "Autonomous Drone",
+          "imgURL": "../../Data/images/alan_mathew.jpg"
+        },
+        {
+          "id": 17,
+          "name": "Sarang S",
+          "role": "Autonomous Drone",
+          "imgURL": "../../Data/images/sarang_s.jpg"
+        },
+        {
+          "id": 18,
+          "name": "Asher Mohan",
+          "role": "Documentation Head",
+          "imgURL": "../../Data/images/asher_mohan.jpg"
+        },
+        {
+          "id": 19,
+          "name": "Pranoy Chandran",
+          "role": "Sponsorship Head & Event Manager",
+          "imgURL": "../../Data/images/pranoy_chandran.jpg"
+        },
+        {
+          "id": 20,
+          "name": "Sreya Krishnan",
+          "role": "Sponsorship Head & Event Manager",
+          "imgURL": "../../Data/images/sreya_krishnan.jpg"
+        },
+        {
+          "id": 21,
+          "name": "Sadhika M P",
+          "role": "Treasurer",
+          "imgURL": "../../Data/images/sadhika_mp.jpg"
+        },
+        {
+          "id": 22,
+          "name": "Jonathan Joshy P",
+          "role": "Media Manager",
+          "imgURL": "../../Data/images/jonathan_joshy.jpg"
+        },
+        {
+          "id": 23,
+          "name": "Adhiya B",
+          "role": "Media Manager",
+          "imgURL": "../../Data/images/adhiya_b.jpg"
+        }
+      ]
+      

@@ -1,19 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 4px; /* Width of the vertical scrollbar */
+  height: 4px; /* Height of the horizontal scrollbar */
+}
 
-App{
+::-webkit-scrollbar-track {
+  background: #eaeaea00; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(241, 109, 0); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* App and body styles */
+App {
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   background-color: #110011;
   color: white;
-  
+  scrollbar-width: 4px; /* Firefox scrollbar width */
+  scrollbar-color: rgb(241, 109, 0) #eaeaea00; /* Firefox scrollbar color */
 }
-h1{
+
+h1 {
   font-family: "Sancreek", serif;
   font-weight: 400;
   font-style: normal;
-  
 }

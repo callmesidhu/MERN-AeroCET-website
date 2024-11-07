@@ -1,11 +1,17 @@
 import './Gallery.css';
-import dummy from '../assets/images/sample picture.jpeg';
+import dummy from '../assets/images/sample.jpeg';
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
+import { useNavigate } from 'react-router-dom';
 
 export default function Gallery() {
   const [isActive, setIsActive] = useState(false);
   const galleryRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
+
+  const goTo = () => {
+    navigate('/gallery');
+  };
 
   // Intersection Observer logic
   useEffect(() => {
@@ -28,7 +34,8 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div
+    <div 
+     onClick={goTo}
       ref={galleryRef}
       className={clsx(
         "p-24 w-full shad lg:h-[700px] md:h-[600px] sm:h-[600px] items-center flex-1 flex justify-around lg:flex-row sm:flex-col",
@@ -36,6 +43,7 @@ export default function Gallery() {
         { 'opacity-100 translate-y-0 transition-all duration-1000 delay-200 ease-in-out': isActive } // Visible state
       )}
     >
+    
       {/* First Scrollable Column */}
       <div className={clsx(
         "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] scroll-up items-center justify-around gap-3",
