@@ -1,17 +1,19 @@
 const { MongoClient, Binary } = require('mongodb');
 const fs = require('fs');
-const path = require('path'); 
+const path = require('path');
 
-// Connection URI
-const uri = 'mongodb://localhost:27017';
+// Connection URI from environment variable for security
+const uri = process.env.MONGODB_URI ;
 
 // Database and collection names
 const dbName = 'aerocetdb';
 const collectionName = 'aeroDownload';
 
 async function insertPDF() {
-  // Create a MongoDB client
-  const client = new MongoClient(uri);
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,  // use new connection string parser
+    useUnifiedTopology: true  // use new connection management engine
+  });
 
   try {
     // Connect to MongoDB
@@ -22,8 +24,10 @@ async function insertPDF() {
     const collection = db.collection(collectionName);
 
     // Read the PDF file as binary data
-    const pdfData = fs.readFileSync(path.join(__dirname, '.././public/data/aerocet.pdf'));
-    
+    const pdfPath = path.join(__dirname, '../public/data/aerocet.pdf');
+    const pdfData = fs.readFileSync(pdfPath);
+    console.log('PDF file read from path:', pdfPath);
+
     // Insert PDF as binary data
     const result = await collection.insertOne({
       filename: 'aerocet.pdf',
@@ -39,4 +43,5 @@ async function insertPDF() {
   }
 }
 
+// Execute the function
 insertPDF();
