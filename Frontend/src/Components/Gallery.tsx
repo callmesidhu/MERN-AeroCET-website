@@ -2,10 +2,14 @@ import './Gallery.css';
 import dummy from '../assets/images/sample.jpeg';
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 export default function Gallery() {
   const [isActive, setIsActive] = useState(false);
+  const [images, setImages] = useState<string[]>([]); // Ensure this is an array of strings (image URLs)
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
   const galleryRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
 
@@ -15,6 +19,17 @@ export default function Gallery() {
 
   // Intersection Observer logic
   useEffect(() => {
+    axios.get('http://localhost:3001/api/data')
+      .then((response) => {
+        console.log(response.data.images); // Check if URLs are correct
+        setImages(response.data.images); // Store the fetched image URLs
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        setLoading(false);
+      });
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsActive(entry.isIntersecting);
@@ -50,8 +65,8 @@ export default function Gallery() {
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 delay-300 ease-in-out': isActive } // Visible state
       )}>
-        {Array.from({ length: 10 }).map((_, index) => (
-          <img key={index} src={dummy} alt="Loader-image" className="rounded-3xl" />
+       {images.map((imageUrl, index) => (
+          <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
         ))}
       </div>
 
@@ -61,8 +76,8 @@ export default function Gallery() {
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-1000 delay-700 ease-in-out': isActive } // Visible state
       )}>
-        {Array.from({ length: 18 }).map((_, index) => (
-          <img key={index} src={dummy} alt="Loader-image" className="rounded-3xl" />
+       {images.map((imageUrl, index) => (
+          <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
         ))}
       </div>
 
@@ -72,8 +87,8 @@ export default function Gallery() {
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 delay-500 ease-in-out': isActive } // Visible state
       )}>
-        {Array.from({ length: 7 }).map((_, index) => (
-          <img key={index} src={dummy} alt="Loader-image" className="rounded-3xl" />
+       {images.map((imageUrl, index) => (
+          <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
         ))}
       </div>
     </div>

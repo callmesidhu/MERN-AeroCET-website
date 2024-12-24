@@ -47,7 +47,11 @@ export default function Contact() {
       )}>
         <img src={drone} alt="Loader-image" className="loader-image h-48" />
         <h2>SUPPORT US IN THE UPCOMING SAE <br />Competitions!</h2>
-        <button>
+        <button
+         onClick={() => {
+          window.window.location.href = 'http://localhost:3001/db/data';
+        }}
+        >
           <img src={download} alt="Loader-image" className="loader-image h-14 my-4" />
         </button>
       </div>
