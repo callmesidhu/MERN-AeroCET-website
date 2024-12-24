@@ -1,17 +1,18 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const driveRoutes = require('./routes/driveData'); 
+const apiRoutes = require('./routes/apiData'); 
 const dbRoutes = require('./routes/dbData'); 
+
 
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3001;
 
 
 app.use('/db', dbRoutes);  
-app.use('/drive', driveRoutes);  
 
+app.use('/api', apiRoutes);
 
 app.get('/', (req, res) => {
   res.send('AeroCET Backend');
