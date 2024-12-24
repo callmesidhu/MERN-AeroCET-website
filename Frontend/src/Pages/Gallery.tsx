@@ -1,11 +1,15 @@
+// Gallery.tsx (Frontend)
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import dummy from '../assets/images/sample.jpeg';
 import logo from '../assets/AeroCET-logo.png';
 import clsx from 'clsx';
+import axios from 'axios';
 
 export default function Gallery() {
   const [isActive, setIsActive] = useState(false);
+  const [images, setImages] = useState<string[]>([]); // Ensure this is an array of strings (image URLs)
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
   const galleryRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
 
@@ -13,8 +17,18 @@ export default function Gallery() {
     navigate('/');
   };
 
-  // Intersection Observer to handle animations when in viewport
   useEffect(() => {
+    axios.get('http://localhost:3001/api/data')
+      .then((response) => {
+        console.log(response.data.images); // Check if URLs are correct
+        setImages(response.data.images); // Store the fetched image URLs
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        setLoading(false);
+      });
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsActive(entry.isIntersecting);
@@ -33,6 +47,14 @@ export default function Gallery() {
     };
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error fetching images: {error.message}</div>;
+  }
+
   return (
     <div 
       ref={galleryRef} 
@@ -42,7 +64,6 @@ export default function Gallery() {
         { 'opacity-100 translate-y-0 transition-all duration-500 delay-200 ease-in-out': isActive }
       )}
     >
-      {/* Centered Logo Button */}
       <button 
         onClick={goTo} 
         className={clsx(
@@ -54,7 +75,6 @@ export default function Gallery() {
         <img src={logo} className="h-32 w-auto transform hover:scale-110 duration-300" alt="logo"/> 
       </button>
 
-      {/* Animated Heading */}
       <h1 
         className={clsx(
           "text-2xl font-bold text-white mb-4 transition-all duration-500 ease-in-out",
@@ -74,22 +94,22 @@ export default function Gallery() {
         Every picture has a story to tell..!
       </p>
 
-      {/* Scrollable Gallery Container */}
       <div className="max-h-[80vh] grid gap-4 
                       grid-cols-2 
                       sm:grid-cols-1
                       md:grid-cols-3
                       lg:grid-cols-4">
-        {Array.from({ length: 50 }).map((_, index) => (
+        {images.map((imageUrl, index) => (
           <img 
             key={index} 
-            src={dummy} 
-            alt="Loader-image" 
+            src={imageUrl || '/path/to/default-image.jpg'} // Fallback image
+            alt={`Gallery image ${index + 1}`} 
             className={clsx(
               "rounded-xl w-full h-auto transform transition duration-300 hover:scale-105",
               { 'opacity-0 translate-y-8': !isActive },
-              { 'opacity-100 translate-y-0 delay-[index*50]': isActive } // Slight staggered effect
+              { 'opacity-100 translate-y-0': isActive },
             )}
+            style={{ transitionDelay: `${index * 50}ms` }}
           />
         ))}
       </div>
