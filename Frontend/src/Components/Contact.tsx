@@ -49,7 +49,7 @@ export default function Contact() {
         <h2>SUPPORT US IN THE UPCOMING SAE <br />Competitions!</h2>
         <button
          onClick={() => {
-          console.log("download req");
+          window.window.location.href = 'http://localhost:3001/db/data';
         }}
         >
           <img src={download} alt="Loader-image" className="loader-image h-14 my-4" />
