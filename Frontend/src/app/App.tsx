@@ -1,4 +1,5 @@
 import { NotFound } from '../Pages/404Error';
+import FullPic from '../Pages/FullPic';
 import Gallery from '../Pages/Gallery';
 import  Home  from '../Pages/Home'
 import Teams from '../Pages/Teams';
@@ -14,7 +15,9 @@ export function App(){
       <Router>
       <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/teams" element={<Teams />} />
+      <Route path="/teams/2025" element={<Teams />} />
+      <Route path="/teams/2024" element={<FullPic />} />
+      <Route path="/teams/2023" element={<FullPic />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
