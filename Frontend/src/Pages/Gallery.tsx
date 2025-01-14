@@ -16,11 +16,14 @@ export default function Gallery() {
   const goTo = () => {
     navigate('/');
   };
-
+  console.log("API URL:", process.env.REACT_APP_API_URL);
   useEffect(() => {
-    axios.get('http://localhost:3001/api/data')
+    axios.get(`${process.env.REACT_APP_API_URL}/api/data`)
+
       .then((response) => {
         console.log(response.data.images); // Check if URLs are correct
+        
+
         setImages(response.data.images); // Store the fetched image URLs
         setLoading(false);
       })
@@ -102,7 +105,7 @@ export default function Gallery() {
         {images.map((imageUrl, index) => (
           <img 
             key={index} 
-            src={imageUrl || ''} // Fallback image
+            src={imageUrl } 
             alt={`Gallery image ${index + 1}`} 
             className={clsx(
               "rounded-xl w-full h-auto transform transition duration-300 hover:scale-105",
