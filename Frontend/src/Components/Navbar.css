@@ -1,7 +1,7 @@
 .nav {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
-  width: 200px; /* Default width */
+  width: 250px; /* Default width */
   transition: width 0.3s ease, backdrop-filter 0.3s ease;
 }
 

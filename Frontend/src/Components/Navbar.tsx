@@ -109,7 +109,7 @@ function Navbar() {
         </button>
       </div>
 
-      <div className={`fixed top-0 left-0 h-full sm:my-10 lg:my-0 shadow-lg nav rounded-r-3xl ${isOpen ? 'open' : 'closed'}`}>
+      <div className={`fixed top-0 left-0 h-full sm:my-10 lg:my-0 shadow-lg nav ${isOpen ? 'open' : 'closed'}`}>
         {/* Menu Items */}
         <div className={`menu-items transition-all duration-300 ease-in-out ${isOpen ? 'open' : 'closed'} lg:flex lg:flex-col lg:justify-around h-svh relative`}>
           <div

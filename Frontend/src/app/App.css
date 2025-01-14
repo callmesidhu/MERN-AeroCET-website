@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
+@import url('https://fonts.cdnfonts.com/css/valorant');
 
 /* For WebKit browsers */
 ::-webkit-scrollbar {
@@ -30,10 +30,15 @@ body {
   scrollbar-color: rgb(241, 109, 0) #eaeaea00; /* Firefox scrollbar color */
 }
 
-h1 {
-  font-family: "Sancreek", serif;
-  font-weight: 400;
+@font-face {
+  font-family: 'Hypik';
+  src: url('../assets/fonts/NoSurrender.ttf') format('truetype'); 
+  font-weight: 1000;
   font-style: normal;
+}
+
+h1 {
+  font-family: 'Hypik', sans-serif;
 }
 
 .shad{
