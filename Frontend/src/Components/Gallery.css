@@ -25,41 +25,13 @@ h1{
 
 /* Gallery.css */
 
-/* Keyframes for scrolling animation */
-@keyframes scroll-up {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes scroll-down {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 
 /* Hide scrollbars */
 .scroll-container {
  
   height: 100%;
-  
- 
 }
 
-/* Apply scroll animation */
-.scroll-container.scroll-up img {
-  animation: scroll-up 10s linear infinite;
-}
-
-.scroll-container.scroll-down img {
-  animation: scroll-down 5s linear infinite;
-}
 
 /* Styling for images */
 .scroll-container img {

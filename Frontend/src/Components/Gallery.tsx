@@ -1,5 +1,4 @@
 import './Gallery.css';
-import dummy from '../assets/images/sample.jpeg';
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import axios from 'axios';
@@ -48,9 +47,14 @@ export default function Gallery() {
     };
   }, []);
 
+  // Split the images array into three parts
+  const firstColumnImages = images.slice(0, Math.ceil(images.length / 3));
+  const secondColumnImages = images.slice(Math.ceil(images.length / 3), 2 * Math.ceil(images.length / 3));
+  const thirdColumnImages = images.slice(2 * Math.ceil(images.length / 3));
+
   return (
     <div 
-     onClick={goTo}
+      onClick={goTo}
       ref={galleryRef}
       className={clsx(
         "p-24 w-full shad lg:h-[700px] md:h-[600px] sm:h-[600px] items-center flex-1 flex justify-around lg:flex-row sm:flex-col",
@@ -58,36 +62,35 @@ export default function Gallery() {
         { 'opacity-100 translate-y-0 transition-all duration-1000 delay-200 ease-in-out': isActive } // Visible state
       )}
     >
-    
       {/* First Scrollable Column */}
       <div className={clsx(
-        "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] scroll-up items-center justify-around gap-3",
+        "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] items-center justify-around gap-3",
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 delay-300 ease-in-out': isActive } // Visible state
       )}>
-       {images.map((imageUrl, index) => (
-          <img key={index} src={imageUrl || dummy} alt="Loader-image" className="rounded-3xl" />
+        {firstColumnImages.map((imageUrl, index) => (
+          <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
         ))}
       </div>
 
       {/* Second Scrollable Column */}
       <div className={clsx(
-        "flex flex-col scroll-container lg:w-[400px] md:w-[500px] sm:w-[250px] scroll-down items-center justify-around gap-3 mx-2",
+        "flex flex-col scroll-container lg:w-[400px] md:w-[500px] sm:w-[250px] items-center justify-around gap-3 mx-2",
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-1000 delay-700 ease-in-out': isActive } // Visible state
       )}>
-       {images.map((imageUrl, index) => (
+        {secondColumnImages.map((imageUrl, index) => (
           <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
         ))}
       </div>
 
       {/* Third Scrollable Column */}
       <div className={clsx(
-        "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] scroll-up items-center justify-around gap-3",
+        "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] items-center justify-around gap-3",
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 delay-500 ease-in-out': isActive } // Visible state
       )}>
-       {images.map((imageUrl, index) => (
+        {thirdColumnImages.map((imageUrl, index) => (
           <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
         ))}
       </div>
