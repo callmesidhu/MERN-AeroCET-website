@@ -60,7 +60,7 @@ export default function Team() {
 
       {/* Execome heading and buttons */}
       <div className="text-center py-10">
-        <h2 className="lg:text-[180px] md:text-[100px] sm:text-[80px] text-[50px] font-semibold mb-6 aven">Execome</h2>
+        <h2 className="lg:text-[180px] md:text-[100px] sm:text-[80px] text-[50px] font-semibold mb-6 aven">Execom</h2>
         <div className="flex gap-2 justify-center lg:flex-row flex-col">
           <button
             onClick={goTo2025}

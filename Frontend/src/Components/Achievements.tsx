@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router-dom';
+import commingSoon from '../assets/images/commingSoon.png';
 
 export default function Achievements() {
   const [isActive, setIsActive] = useState(false);
@@ -17,7 +18,7 @@ export default function Achievements() {
       ([entry]) => {
         setIsActive(entry.isIntersecting);
       },
-      { threshold: 0.2 } // You can adjust this value depending on when you want the effect to trigger
+      { threshold: 0.2 }
     );
 
     if (teamRef.current) {
@@ -36,23 +37,38 @@ export default function Achievements() {
       onClick={goTo}
       ref={teamRef}
       className={clsx(
-        "p-24 w-full shad lg:m-36 md:my-64 items-center lg:h-[500px] md:h-[600px] sm:h-[600px] flex-1 flex justify-around flex-col",
-        { 'opacity-0 translate-y-8': !isActive }, // Hidden state
-        { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out delay-200': isActive } // Visible state with transition
+        "p-6 w-full shad lg:m-36 md:my-64 items-center lg:h-[600px] md:h-[700px] sm:h-[700px] flex-1 flex flex-col bg-gray-100 rounded-3xl",
+        { 'opacity-0 translate-y-8': !isActive },
+        { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out delay-200': isActive }
       )}
     >
-      {/* Animated heading */}
-      <div
+      {/* Heading */}
+      <h1
         className={clsx(
+          "text-4xl font-bold text-gray-800 my-12",
           "transition-all duration-500 ease-in-out",
-          { 'opacity-0 translate-y-8': !isActive }, // Hidden state
-          { 'opacity-100 translate-y-0 delay-500': isActive } // Visible state with delay
+          { 'opacity-0 translate-y-8': !isActive },
+          { 'opacity-100 translate-y-0 delay-500': isActive }
         )}
       >
-        <h1 className="text-3xl mt-12">Achievements</h1>
-      </div>
+        Achievements
+      </h1>
 
-     
+      {/* Image */}
+      <div
+        className={clsx(
+          "flex-1 flex justify-center items-center",
+          "transition-all duration-500 ease-in-out",
+          { 'opacity-0 translate-y-8': !isActive },
+          { 'opacity-100 translate-y-0 delay-700': isActive }
+        )}
+      >
+        <img
+          src={commingSoon}
+          alt="Coming Soon"
+          className="rounded-xl h-96 shadow-lg"
+        />
+      </div>
     </div>
   );
 }
