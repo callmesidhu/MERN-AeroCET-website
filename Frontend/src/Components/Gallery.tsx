@@ -64,7 +64,7 @@ export default function Gallery() {
     >
       {/* First Scrollable Column */}
       <div className={clsx(
-        "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] items-center justify-around gap-3",
+        "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] scroll-up items-center justify-around gap-3",
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 delay-300 ease-in-out': isActive } // Visible state
       )}>
@@ -75,7 +75,7 @@ export default function Gallery() {
 
       {/* Second Scrollable Column */}
       <div className={clsx(
-        "flex flex-col scroll-container lg:w-[400px] md:w-[500px] sm:w-[250px] items-center justify-around gap-3 mx-2",
+        "flex flex-col scroll-container lg:w-[400px] md:w-[500px] sm:w-[250px] scroll-down items-center justify-around gap-3 mx-2",
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-1000 delay-700 ease-in-out': isActive } // Visible state
       )}>
@@ -86,7 +86,7 @@ export default function Gallery() {
 
       {/* Third Scrollable Column */}
       <div className={clsx(
-        "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] items-center justify-around gap-3",
+        "flex flex-col scroll-container lg:w-[300px] md:w-[500px] sm:w-[250px] scroll-up items-center justify-around gap-3",
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 delay-500 ease-in-out': isActive } // Visible state
       )}>

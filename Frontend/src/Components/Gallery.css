@@ -25,13 +25,41 @@ h1{
 
 /* Gallery.css */
 
+/* Keyframes for scrolling animation */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 
 /* Hide scrollbars */
 .scroll-container {
  
   height: 100%;
+  
+ 
 }
 
+/* Apply scroll animation */
+.scroll-container.scroll-up img {
+  
+}
+
+.scroll-container.scroll-down img {
+  
+}
 
 /* Styling for images */
 .scroll-container img {
