@@ -1,4 +1,3 @@
-import jet from '../assets/images/jet.png';
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 
@@ -41,15 +40,20 @@ export default function About() {
         { 'opacity-100 translate-y-0 transition-all duration-500 delay-500 ease-in-out': isActive } // Visible state
       )}>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">About Us</h1>
-        <img
-          src={jet}
-          alt="About Image"
-          className={clsx(
-            "w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full shadow-md object-cover mb-6",
-            { 'opacity-0 translate-y-20': !isActive }, // Hidden state
-            { 'opacity-100 translate-y-0 transition-transform duration-1000 delay-500 ease-in-out': isActive } // Visible state
-          )}
-        />
+        <div className={clsx(
+          "w-full h-64 md:h-80 lg:h-96 relative mb-6",
+          { 'opacity-0 translate-y-20': !isActive }, // Hidden state
+          { 'opacity-100 translate-y-0 transition-transform duration-1000 delay-500 ease-in-out': isActive } // Visible state
+        )}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
+            src="https://www.youtube.com/embed/Zrt77f7nTqY?autoplay=1&mute=1&loop=1&controls=0&playlist=Zrt77f7nTqY"
+            title="About Video"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        </div>
         <p className="text-base md:text-lg lg:text-xl mb-6">
           We believe in innovation, integrity, and commitment to excellence. Our team of experts works tirelessly to deliver high-quality solutions that exceed expectations and drive success. Join us on our journey as we continue to push the boundaries and set new standards in our industry.
         </p>

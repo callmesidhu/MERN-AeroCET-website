@@ -68,7 +68,7 @@ export default function Intro() {
             'z-10 lg:text-[30px] md:text-3xl sm:text-2xl la-belle-aurore-regular lg:mb-60 md:mb-0 sm:mb-0',
             { 'opacity-0 scale-0': !isActive }, // Hidden state
             { 'opacity-100 scale-100 transition-transform duration-1000 delay-0 ease-in-out': isActive } // Visible state
-          )}  >Fly Against the Wind..!</h2>
+          )}  >Fly Against the Wind!</h2>
     </div>
   );
 }
