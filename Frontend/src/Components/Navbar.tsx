@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import logo from '../assets/AeroCET-logo.png';
 import './Navbar.css';
 
-
 function Navbar() {
   const [isOpen, setIsOpen] = useState(true);
   const [visibleSection, setVisibleSection] = useState<string | null>(null);
@@ -22,7 +21,17 @@ function Navbar() {
   };
 
   useEffect(() => {
-    const sectionIds = ['about', 'contact', 'intro', 'gallery', 'team'];
+    const sectionIds = [
+      'projects',
+      'achievements',
+      'team',
+      'announcements',
+      'home',
+      'contact',
+      'about',
+      'gallery',
+      'workshop',
+    ];
     let currentVisibleSection: string | null = null;
 
     const observer = new IntersectionObserver(
@@ -105,9 +114,33 @@ function Navbar() {
         <div className={`menu-items transition-all duration-300 ease-in-out ${isOpen ? 'open' : 'closed'} lg:flex lg:flex-col lg:justify-around h-svh relative`}>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
-            onClick={() => handleScroll('about')}>
-            <img src={logo} alt='About Logo' className={`load-image ${visibleSection === 'about' ? 'show' : ''} h-16`} />
-            <h1 className='text-2xl mx-3'>About</h1>
+            onClick={() => handleScroll('projects')}>
+            <img src={logo} alt='Projects Logo' className={`load-image ${visibleSection === 'projects' ? 'show' : ''} h-16`} />
+            <h1 className='text-2xl mx-3'>Projects</h1>
+          </div>
+          <div
+            className='flex flex-row items-center mb-3 cursor-pointer'
+            onClick={() => handleScroll('achievements')}>
+            <img src={logo} alt='Achievements Logo' className={`load-image ${visibleSection === 'achievements' ? 'show' : ''} h-16`} />
+            <h1 className='text-2xl mx-3'>Achieve.</h1>
+          </div>
+          <div
+            className='flex flex-row items-center mb-3 cursor-pointer'
+            onClick={() => handleScroll('team')}>
+            <img src={logo} alt='Teams Logo' className={`load-image ${visibleSection === 'team' ? 'show' : ''} h-16`} />
+            <h1 className='text-2xl mx-3'>Team</h1>
+          </div>
+          <div
+            className='flex flex-row items-center mb-3 cursor-pointer'
+            onClick={() => handleScroll('announcements')}>
+            <img src={logo} alt='Announcements Logo' className={`load-image ${visibleSection === 'announcements' ? 'show' : ''} h-16`} />
+            <h1 className='text-2xl mx-3'>Announc.</h1>
+          </div>
+          <div
+            className='flex flex-row items-center mb-3 cursor-pointer'
+            onClick={() => handleScroll('intro')}>
+            <img src={logo} alt='Home Logo' className={`load-image ${visibleSection === 'home' ? 'show' : ''} h-16`} />
+            <h1 className='text-2xl mx-3'>Home</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
@@ -117,21 +150,21 @@ function Navbar() {
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
-            onClick={() => handleScroll('intro')}>
-            <img src={logo} alt='Home Logo' className={`load-image ${visibleSection === 'intro' ? 'show' : ''} h-16`} />
-            <h1 className='text-2xl mx-3'>Home</h1>
-          </div>
-          <div
-            className='flex flex-row items-center mb-3 cursor-pointer'
-            onClick={() => handleScroll('team')}>
-            <img src={logo} alt='Teams Logo' className={`load-image ${visibleSection === 'team' ? 'show' : ''} h-16`} />
-            <h1 className='text-2xl mx-3'>Teams</h1>
+            onClick={() => handleScroll('about')}>
+            <img src={logo} alt='About Logo' className={`load-image ${visibleSection === 'about' ? 'show' : ''} h-16`} />
+            <h1 className='text-2xl mx-3'>About</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('gallery')}>
             <img src={logo} alt='Gallery Logo' className={`load-image ${visibleSection === 'gallery' ? 'show' : ''} h-16`} />
             <h1 className='text-2xl mx-3'>Gallery</h1>
+          </div>
+          <div
+            className='flex flex-row items-center mb-3 cursor-pointer'
+            onClick={() => handleScroll('workshop')}>
+            <img src={logo} alt='Workshop Logo' className={`load-image ${visibleSection === 'workshop' ? 'show' : ''} h-16`} />
+            <h1 className='text-2xl mx-3'>Workshop</h1>
           </div>
         </div>
       </div>

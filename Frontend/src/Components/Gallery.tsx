@@ -66,7 +66,7 @@ export default function Gallery() {
         { 'opacity-100 translate-y-0 transition-all duration-700 delay-300 ease-in-out': isActive } // Visible state
       )}>
        {images.map((imageUrl, index) => (
-          <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
+          <img key={index} src={imageUrl || dummy} alt="Loader-image" className="rounded-3xl" />
         ))}
       </div>
 

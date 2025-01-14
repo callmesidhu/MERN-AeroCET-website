@@ -6,6 +6,10 @@ import Gallery from '../Components/Gallery';
 import Team from '../Components/Team';
 import About from '../Components/About';
 import Contact from '../Components/Contact'
+import Announcements from '../Components/Announcements';
+import Achievements from '../Components/Achievements';
+import Projects from '../Components/Projects';
+import Workshop from '../Components/Workshop';
 
 
 
@@ -42,8 +46,20 @@ const Home: React.FC = () => {
       <div className='main' id='intro'>
         <Intro/>
       </div>
-      <div  className='main' id='team'>
-        <Team />
+      <div  className='main' id='announcements'>
+        <Announcements/>
+      </div>
+      <div className='main' id='team'>
+        <Team/>
+      </div>
+      <div className='main' id='achievements'>
+        <Achievements/>
+      </div>
+      <div className='main' id='projects'>
+        <Projects/>
+      </div>
+      <div className='main' id='workshop'>
+        <Workshop/>
       </div>
       <div className='main' id='gallery'>
         <Gallery/>

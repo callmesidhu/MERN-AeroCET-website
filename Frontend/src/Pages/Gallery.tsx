@@ -102,7 +102,7 @@ export default function Gallery() {
         {images.map((imageUrl, index) => (
           <img 
             key={index} 
-            src={imageUrl || '/path/to/default-image.jpg'} // Fallback image
+            src={imageUrl || ''} // Fallback image
             alt={`Gallery image ${index + 1}`} 
             className={clsx(
               "rounded-xl w-full h-auto transform transition duration-300 hover:scale-105",
