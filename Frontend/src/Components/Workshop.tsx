@@ -53,37 +53,10 @@ export default function Workshop() {
         )}
       >
         <h1 className="text-3xl mt-12">Workshops</h1>
-        <p>Click to view our Team..!</p>
+        
       </div>
 
-      {/* Animated buttons */}
-      <div className="flex-1 flex items-center justify-around w-full sm:flex-col md:flex-col lg:flex-row">
-        <button
-          className={clsx(
-            "team-button transition-all duration-500 ease-in-out",
-            { 'opacity-0 translate-y-8': !isActive }, // Hidden state
-            { 'opacity-100 translate-y-0 delay-700': isActive } // Visible state with delay
-          )}
-        >
-          <div className="">
-            <img src={plane} alt="Image of a plane" className="team-image sm:h-20 md:h-32 lg:h-40" />
-            <h1 className="text-3xl text-center">Plane</h1>
-          </div>
-        </button>
-
-        <button
-          className={clsx(
-            "team-button transition-all duration-500 ease-in-out",
-            { 'opacity-0 translate-y-8': !isActive }, // Hidden state
-            { 'opacity-100 translate-y-0 delay-1000': isActive } // Visible state with delay
-          )}
-        >
-          <div className="">
-            <img src={drone} alt="Image of a drone" className="team-image sm:h-20 md:h-32 lg:h-40" />
-            <h1 className="text-3xl text-center">Drone</h1>
-          </div>
-        </button>
-      </div>
+     
     </div>
   );
 }
