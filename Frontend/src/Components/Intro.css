@@ -6,14 +6,6 @@ body{
           overflow-y: hidden;
           
 }
-.shad{
-          border: 0px solid;
-
-          box-shadow: 0px 0px 35px #FF6A00; 
-          border-radius: 100px;
-}
-
-
 
 .parallax-image,
 .parallax-text {

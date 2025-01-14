@@ -2,7 +2,6 @@ import { FaLinkedinIn, FaWhatsapp, FaYoutube, FaInstagram, FaPhoneAlt } from 're
 import { SiGmail } from 'react-icons/si';
 import drone from '../assets/images/drone.png';
 import download from '../assets/images/downloadButton.png';
-import './Contact.css';
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 

@@ -1,7 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import './Team.css';
-import plane from '../assets/images/vectorPlane.png';
-import drone from '../assets/images/vectorDrone.png';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router-dom';
 
