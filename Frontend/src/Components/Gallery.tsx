@@ -6,9 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Gallery() {
   const [isActive, setIsActive] = useState(false);
-  const [images, setImages] = useState<string[]>([]); // Ensure this is an array of strings (image URLs)
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
+  const [images, setImages] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true); // Loading state
   const galleryRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
 
@@ -22,10 +21,13 @@ export default function Gallery() {
       .then((response) => {
         console.log(response.data.images); // Check if URLs are correct
         setImages(response.data.images); // Store the fetched image URLs
-        setLoading(false);
+        
+        // Simulate a 1-second loading delay
+        setTimeout(() => {
+          setLoading(false); // After 1 second, stop loading
+        }, 1000);
       })
-      .catch((err) => {
-        setError(err);
+      .catch(() => {
         setLoading(false);
       });
 
@@ -68,9 +70,13 @@ export default function Gallery() {
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 delay-300 ease-in-out': isActive } // Visible state
       )}>
-        {firstColumnImages.map((imageUrl, index) => (
-          <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
-        ))}
+        {!loading ? (
+          firstColumnImages.map((imageUrl, index) => (
+            <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
+          ))
+        ) : (
+          <div className="loader">Loading...</div> // Display loader while loading
+        )}
       </div>
 
       {/* Second Scrollable Column */}
@@ -79,9 +85,13 @@ export default function Gallery() {
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-1000 delay-700 ease-in-out': isActive } // Visible state
       )}>
-        {secondColumnImages.map((imageUrl, index) => (
-          <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
-        ))}
+        {!loading ? (
+          secondColumnImages.map((imageUrl, index) => (
+            <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
+          ))
+        ) : (
+          <div className="loader">Loading...</div> // Display loader while loading
+        )}
       </div>
 
       {/* Third Scrollable Column */}
@@ -90,9 +100,13 @@ export default function Gallery() {
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 delay-500 ease-in-out': isActive } // Visible state
       )}>
-        {thirdColumnImages.map((imageUrl, index) => (
-          <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
-        ))}
+        {!loading ? (
+          thirdColumnImages.map((imageUrl, index) => (
+            <img key={index} src={imageUrl || '/path/to/default-image.jpg'} alt="Loader-image" className="rounded-3xl" />
+          ))
+        ) : (
+          <div className="loader">Loading...</div> // Display loader while loading
+        )}
       </div>
     </div>
   );

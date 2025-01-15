@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useLocation, useNavigate } from 'react-router-dom';
 import img2023 from '../../Data/execom/2023.jpg';
 import img2024 from '../../Data/execom/2024.jpg';
