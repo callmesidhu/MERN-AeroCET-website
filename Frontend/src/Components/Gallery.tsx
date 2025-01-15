@@ -13,12 +13,12 @@ export default function Gallery() {
   const navigate = useNavigate();
 
   const goTo = () => {
-    navigate('/gallery');
+    navigate('/');
   };
 
   // Intersection Observer logic
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/api/data`)
+    axios.get(`http://localhost:3001/api/data`)
       .then((response) => {
         console.log(response.data.images); // Check if URLs are correct
         setImages(response.data.images); // Store the fetched image URLs
