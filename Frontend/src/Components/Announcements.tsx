@@ -45,7 +45,7 @@ export default function Achievements() {
       {/* Heading */}
       <h1
         className={clsx(
-          'text-4xl font-bold my-6',
+          'lg:text-4xl text-3xl font-bold my-6',
           'transition-all duration-500 ease-in-out',
           { 'opacity-0 translate-y-8': !isActive },
           { 'opacity-100 translate-y-0 delay-500': isActive }
