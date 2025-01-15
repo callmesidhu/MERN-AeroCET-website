@@ -51,7 +51,7 @@ export default function Achievements() {
           { 'opacity-100 translate-y-0 delay-500': isActive }
         )}
       >
-        Achievements
+        Announcements
       </h1>
 
       {/* Render Achievements in Reverse Order */}
