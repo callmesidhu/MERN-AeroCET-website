@@ -1,15 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
-
-h1 {
-  font-family: "Sancreek", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .nav {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
-  width: 200px; /* Default width */
+  width: 250px; /* Default width */
   transition: width 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -68,3 +60,6 @@ h1 {
     opacity: 0; /* Hide the image on mobile screens */
   }
 }
+
+
+

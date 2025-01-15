@@ -41,13 +41,13 @@ export default function Teams() {
           { 'opacity-0 translate-y-8': !isActive },
           { 'opacity-100 translate-y-0 delay-500': isActive }
         )}>
-        <img src={logo} className="h-32 w-auto transform transition duration-00 hover:scale-110" alt="logo" />
+        <img src={logo} className="h-24 w-auto sm:h-32 transform transition duration-500 hover:scale-110" alt="logo" />
       </button>
       
       {/* Content */}
       <h1
         className={clsx(
-          "text-2xl font-bold text-white mb-4",
+          "text-xl sm:text-2xl font-bold text-white mb-4",
           { 'opacity-0 translate-y-8': !isActive }, // Hidden state
           { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out delay-200': isActive } // Visible state
         )}
@@ -56,7 +56,7 @@ export default function Teams() {
       </h1>
       <p
         className={clsx(
-          "text-white text-center mb-4",
+          "text-white text-center text-sm sm:text-base mb-4",
           { 'opacity-0 translate-y-8': !isActive },
           { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out delay-400': isActive }
         )}
@@ -65,19 +65,19 @@ export default function Teams() {
       </p>
   
       {/* Team Members */}
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-6 md:grid-cols-4 gap-3 w-full rounded-lg">
         {people.map((member) => (
           <div
             key={member.id}
             className={clsx(
-              "bg-gray-800 p-4 rounded-xl transform transition duration-300 hover:scale-105",
+              "bg-gray-800 p-4 rounded-xl transform transition duration-300 hover:scale-105 flex flex-col items-center",
               { 'opacity-0 translate-y-8': !isActive }, // Hidden state
-              { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out delay-700': isActive } // Visible state
+              { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out': isActive } // Visible state
             )}
           >
-            <img src={member.imgURL || logo} className="rounded-lg" alt={member.name} />
-            <h2 className="text-lg font-semibold text-orange-500 text-center">{member.name}</h2>
-            <p className="text-white text-center">{member.role}</p>
+            <img src={member.imgURL || logo} className="rounded-lg h-32 w-32 sm:h-48 sm:w-48 object-cover" alt={member.name} />
+            <h2 className="text-lg font-semibold text-orange-500 text-center mt-2">{member.name}</h2>
+            <p className="text-white text-center text-sm">{member.role}</p>
           </div>
         ))}
       </div>

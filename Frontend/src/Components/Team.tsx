@@ -1,17 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
-import './Team.css';
-import plane from '../assets/images/vectorPlane.png';
-import drone from '../assets/images/vectorDrone.png';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router-dom';
+import './Teams.css'
 
 export default function Team() {
   const [isActive, setIsActive] = useState(false);
   const teamRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
 
-  const goTo = () => {
-    navigate('/teams');
+  const goTo2023 = () => {
+    navigate('/teams/2023');
+  };
+  const goTo2024 = () => {
+    navigate('/teams/2024');
+  };
+  const goTo2025 = () => {
+    navigate('/teams/2025');
   };
 
   // Intersection Observer logic
@@ -36,10 +40,9 @@ export default function Team() {
 
   return (
     <div
-      onClick={goTo}
       ref={teamRef}
       className={clsx(
-        "p-24 w-full shad lg:m-36 md:my-64 items-center lg:h-[500px] md:h-[600px] sm:h-[600px] flex-1 flex justify-around flex-col",
+        "p-24 w-full shad lg:m-36 md:my-64 items-center lg:h-[500px] md:h-[600px] sm:h-[600px] flex-1 flex flex-col",
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out delay-200': isActive } // Visible state with transition
       )}
@@ -52,37 +55,42 @@ export default function Team() {
           { 'opacity-100 translate-y-0 delay-500': isActive } // Visible state with delay
         )}
       >
-        <h1 className="text-3xl mt-12">Our Team</h1>
-        <p>Click to view our Team..!</p>
+        <h1 className="text-3xl mt-10 ">Our Team</h1>
       </div>
 
-      {/* Animated buttons */}
-      <div className="flex-1 flex items-center justify-around w-full sm:flex-col md:flex-col lg:flex-row">
-        <button
-          className={clsx(
-            "team-button transition-all duration-500 ease-in-out",
-            { 'opacity-0 translate-y-8': !isActive }, // Hidden state
-            { 'opacity-100 translate-y-0 delay-700': isActive } // Visible state with delay
-          )}
-        >
-          <div className="">
-            <img src={plane} alt="Image of a plane" className="team-image sm:h-20 md:h-32 lg:h-40" />
-            <h1 className="text-3xl text-center">Plane</h1>
+      {/* Execome heading and buttons */}
+      <div className="text-center py-10">
+        <h2 className="lg:text-[180px] md:text-[100px] sm:text-[80px] text-[50px] font-semibold mb-6 aven">Execom</h2>
+        <div className="flex gap-2 justify-center lg:flex-row flex-col">
+          <button
+            onClick={goTo2025}
+            className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-300 transition"
+          >
+            2025
+          </button>
+          <button
+            onClick={goTo2024}
+            className="px-6 py-2 bg-orange-700 text-white rounded-lg hover:bg-orange-300 opacity-60 transition"
+          >
+            2024
+          </button>
+          <button
+            onClick={goTo2023}
+            className="px-6 py-2 bg-orange-900 text-white rounded-lg hover:bg-orange-300 opacity-40 transition"
+          >
+            2023
+          </button>
+          <div
+            className="px-6 py-2 bg-orange-900 text-white rounded-lg  opacity-25 transition"
+          >
+            2022
           </div>
-        </button>
-
-        <button
-          className={clsx(
-            "team-button transition-all duration-500 ease-in-out",
-            { 'opacity-0 translate-y-8': !isActive }, // Hidden state
-            { 'opacity-100 translate-y-0 delay-1000': isActive } // Visible state with delay
-          )}
-        >
-          <div className="">
-            <img src={drone} alt="Image of a drone" className="team-image sm:h-20 md:h-32 lg:h-40" />
-            <h1 className="text-3xl text-center">Drone</h1>
+          <div
+            className="px-6 py-2 bg-orange-900 text-white rounded-lg  opacity-10 transition"
+          >
+            2021
           </div>
-        </button>
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/valorant');
+
 /* For WebKit browsers */
 ::-webkit-scrollbar {
   width: 4px; /* Width of the vertical scrollbar */
@@ -28,8 +30,20 @@ body {
   scrollbar-color: rgb(241, 109, 0) #eaeaea00; /* Firefox scrollbar color */
 }
 
-h1 {
-  font-family: "Sancreek", serif;
-  font-weight: 400;
+@font-face {
+  font-family: 'Hypik';
+  src: url('../assets/fonts/NoSurrender.ttf') format('truetype'); 
+  font-weight: 1000;
   font-style: normal;
+}
+
+h1 {
+  font-family: 'Hypik', sans-serif;
+}
+
+.shad{
+  border: 0px solid;
+  padding: 10px;
+  box-shadow: 0px 0px 35px #FF6A00; 
+  border-radius: 50px;
 }
