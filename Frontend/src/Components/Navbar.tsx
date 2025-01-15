@@ -116,55 +116,55 @@ function Navbar() {
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('projects')}>
             <img src={logo} alt='Projects Logo' className={`load-image ${visibleSection === 'projects' ? 'show' : ''} h-16`} />
-            <h1 className={`text-2xl mx-3 ${visibleSection === 'projects' ? 'text-yellow-500' : 'text-white'}`}>Projects</h1>
+            <h1 className={`text-2xl mx-3 ${visibleSection === 'projects' ? 'lg:text-yellow-500' : 'text-white'}`}>Projects</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('achievements')}>
             <img src={logo} alt='Achievements Logo' className={`load-image ${visibleSection === 'achievements' ? 'show' : ''} h-16`} />
-            <h1 className={`text-2xl mx-3 ${visibleSection === 'achievements' ? 'text-yellow-500' : 'text-white'}`}>Achieve.</h1>
+            <h1 className={`text-2xl mx-3 ${visibleSection === 'achievements' ? 'lg:text-yellow-500' : 'text-white'}`}>Achieve.</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('team')}>
             <img src={logo} alt='Teams Logo' className={`load-image ${visibleSection === 'team' ? 'show' : ''} h-16`} />
-            <h1 className={`text-2xl mx-3 ${visibleSection === 'team' ? 'text-yellow-500' : 'text-white'}`}>Team</h1>
+            <h1 className={`text-2xl mx-3 ${visibleSection === 'team' ? 'lg:text-yellow-500' : 'text-white'}`}>Team</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('announcements')}>
             <img src={logo} alt='Announcements Logo' className={`load-image ${visibleSection === 'announcements' ? 'show' : ''} h-16`} />
-            <h1 className={`text-2xl mx-3 ${visibleSection === 'announcements' ? 'text-yellow-500' : 'text-white'}`}>Announc.</h1>
+            <h1 className={`text-2xl mx-3 ${visibleSection === 'announcements' ? 'lg:text-yellow-500' : 'text-white'}`}>Announc.</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('intro')}>
             <img src={logo} alt='Home Logo' className={`load-image ${visibleSection === 'intro' ? 'show' : ''} h-16`} />
-            <h1 className={`text-2xl mx-3 ${visibleSection === 'intro' ? 'text-yellow-500' : 'text-white'}`}>Home</h1>
+            <h1 className={`text-2xl mx-3 ${visibleSection === 'intro' ? 'lg:text-yellow-500' : 'text-white'}`}>Home</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('contact')}>
             <img src={logo} alt='Contact Logo' className={`load-image ${visibleSection === 'contact' ? 'show' : ''} h-16`} />
-            <h1 className={`text-2xl mx-3 ${visibleSection === 'contact' ? 'text-yellow-500' : 'text-white'}`}>Contact</h1>
+            <h1 className={`text-2xl mx-3 ${visibleSection === 'contact' ? 'lg:text-yellow-500' : 'text-white'}`}>Contact</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('about')}>
             <img src={logo} alt='About Logo' className={`load-image ${visibleSection === 'about' ? 'show' : ''} h-16`} />
-            <h1 className={`text-2xl mx-3 ${visibleSection === 'about' ? 'text-yellow-500' : 'text-white'}`}>About</h1>
+            <h1 className={`text-2xl mx-3 ${visibleSection === 'about' ? 'lg:text-yellow-500' : 'text-white'}`}>About</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('gallery')}>
             <img src={logo} alt='Gallery Logo' className={`load-image ${visibleSection === 'gallery' ? 'show' : ''} h-16`} />
-            <h1 className={`text-2xl mx-3 ${visibleSection === 'gallery' ? 'text-yellow-500' : 'text-white'}`}>Gallery</h1>
+            <h1 className={`text-2xl mx-3 ${visibleSection === 'gallery' ? 'lg:text-yellow-500' : 'text-white'}`}>Gallery</h1>
           </div>
           <div
             className='flex flex-row items-center mb-3 cursor-pointer'
             onClick={() => handleScroll('workshop')}>
             <img src={logo} alt='Workshop Logo' className={`load-image ${visibleSection === 'workshop' ? 'show' : ''} h-16`} />
-            <h1 className={`text-2xl mx-3 ${visibleSection === 'workshop' ? 'text-yellow-500' : 'text-white'}`}>Workshop</h1>
+            <h1 className={`text-2xl mx-3 ${visibleSection === 'workshop' ? 'lg:text-yellow-500' : 'text-white'}`}>Workshop</h1>
           </div>
         </div>
       </div>
