@@ -42,7 +42,7 @@ export default function Team() {
     <div
       ref={teamRef}
       className={clsx(
-        "p-24 w-full shad lg:m-36 md:my-64 items-center lg:h-[500px] md:h-[600px] sm:h-[600px] flex-1 flex flex-col",
+        "p-24 w-full shad lg:m-44 md:my-64 items-center lg:h-[500px] md:h-[600px] sm:h-[600px] flex-1 flex flex-col",
         { 'opacity-0 translate-y-8': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out delay-200': isActive } // Visible state with transition
       )}

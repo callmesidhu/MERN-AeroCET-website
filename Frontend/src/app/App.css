@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/valorant');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Teko:wght@300..700&display=swap');
 
 /* For WebKit browsers */
 ::-webkit-scrollbar {
@@ -31,14 +31,14 @@ body {
 }
 
 @font-face {
-  font-family: 'Hypik';
+  font-family: 'custom';
   src: url('../assets/fonts/NoSurrender.ttf') format('truetype'); 
   font-weight: 1000;
   font-style: normal;
 }
 
 h1 {
-  font-family: 'Hypik', sans-serif;
+  font-family: "custom", serif;
 }
 
 .shad{

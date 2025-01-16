@@ -37,7 +37,7 @@ export default function Projects() {
       onClick={goTo}
       ref={teamRef}
       className={clsx(
-        "p-6 w-full shad lg:m-36 md:my-64 items-center lg:h-[600px] md:h-[700px] sm:h-[700px] flex-1 flex flex-col bg-gray-200  rounded-3xl",
+        "p-6 w-full shad lg:m-44 md:my-64 items-center lg:h-[600px] md:h-[700px] sm:h-[700px] flex-1 flex flex-col bg-gray-200  rounded-3xl",
         { 'opacity-0 translate-y-8': !isActive },
         { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out delay-200': isActive }
       )}
