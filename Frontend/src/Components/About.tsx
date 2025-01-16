@@ -29,7 +29,7 @@ export default function About() {
     <div
       ref={aboutRef}
       className={clsx(
-        "p-6 lg:p-12 xl:p-24 w-full flex flex-col items-center justify-center shad",
+        "p-6 lg:m-2 lg:p-12 xl:p-24 w-full flex flex-col items-center justify-center shad",
         { 'opacity-0 translate-y-32': !isActive }, // Hidden state
         { 'opacity-100 translate-y-0 transition-all duration-1000 delay-300 ease-in-out': isActive } // Visible state
       )}

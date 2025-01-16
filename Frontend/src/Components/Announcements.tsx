@@ -37,7 +37,7 @@ export default function Achievements() {
       onClick={goTo}
       ref={teamRef}
       className={clsx(
-        'p-6 px-12 w-full shad lg:m-36 md:my-64 items-center lg:h-[600px] md:h-[700px] sm:h-[700px] flex-1 flex flex-col rounded-3xl',
+        'p-6 px-12 w-full shad lg:m-44 md:my-64 items-center lg:h-[600px] md:h-[700px] sm:h-[700px] flex-1 flex flex-col rounded-3xl',
         { 'opacity-0 translate-y-8': !isActive },
         { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out delay-200': isActive }
       )}
@@ -45,7 +45,7 @@ export default function Achievements() {
       {/* Heading */}
       <h1
         className={clsx(
-          'text-4xl font-bold my-6',
+          'lg:text-4xl text-3xl font-bold my-6',
           'transition-all duration-500 ease-in-out',
           { 'opacity-0 translate-y-8': !isActive },
           { 'opacity-100 translate-y-0 delay-500': isActive }
