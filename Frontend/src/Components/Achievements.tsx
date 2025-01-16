@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router-dom';
-import commingSoon from '../assets/images/commingSoon.png';
 import achivements from '../../Data/achivements.json';
 
 
