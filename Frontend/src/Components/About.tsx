@@ -55,7 +55,7 @@ export default function About() {
           ></iframe>
         </div>
         <p className="text-base md:text-lg lg:text-xl mb-6">
-          We believe in innovation, integrity, and commitment to excellence. Our team of experts works tirelessly to deliver high-quality solutions that exceed expectations and drive success. Join us on our journey as we continue to push the boundaries and set new standards in our industry.
+        Started by aeromodelling enthusiasts of College of Engineering, Trivandrum, the official club continues to grow in aircraft design, analysis, and fabrication. We constantly explore new avenues of aero-modelling through competitions such as SAE ISS DDC, SAE ISS ADDC, Tathva NIT, Conscientia IIST and research  related to autonomous drone, fixed-wing UAVs and thereby VTOL (vertical take-off and landing) to expand our skills.
         </p>
       </div>
     </div>

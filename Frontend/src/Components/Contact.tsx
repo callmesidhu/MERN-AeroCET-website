@@ -40,7 +40,7 @@ export default function Contact() {
     >
       {/* Left Section */}
       <div className='flex w-full justify-evenly felx-1 lg:flex-row flex-col'>
-      <div className="my-4 flex items-end">
+      <div className="my-4 flex items-center justify-center flex-col">
           <div className='flex items-center justify-center shad bg-orange-500'>
           <FaPhoneAlt className="text-4xl m-2 text-blue-500" /> 
           <p className="lg:text-2xl text-md lg:m-3 m-1 font-bold">
@@ -61,7 +61,7 @@ export default function Contact() {
           window.location.href = 'http://localhost:3001/db/data';
         }}
         >
-          <img src={download} alt="Loader-image" className="loader-image h-14 my-4" />
+          <img src={download} alt="Loader-image" className="loader-image h-18 my-4" />
         </button>
       </div>
       </div>
@@ -73,19 +73,19 @@ export default function Contact() {
         { 'opacity-100 scale-100 transition-transform duration-1000 delay-700 ease-in-out': isActive } // Visible state
       )}>
         
-        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:scale-110 transition-transform">
+        <a href="wa.me/+919496225620" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:scale-110 transition-transform">
           <FaWhatsapp size={32} />
         </a>
         <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:scale-110 transition-transform">
           <FaYoutube size={32} />
         </a>
-        <a href="mailto:someone@example.com" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:scale-110 transition-transform">
+        <a href="mailto:aerocetteam@gmail.com" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:scale-110 transition-transform">
           <SiGmail size={32} />
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:scale-110 transition-transform">
+        <a href="https://www.instagram.com/cetaero/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:scale-110 transition-transform">
           <FaInstagram size={32} />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:scale-110 transition-transform">
+        <a href="https://www.linkedin.com/company/aerocetteam/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:scale-110 transition-transform">
           <FaLinkedinIn size={32} />
         </a>
       </div>
