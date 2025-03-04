@@ -44,8 +44,8 @@ export default function Contact() {
           <div className='flex items-center justify-center shad bg-orange-500'>
           <FaPhoneAlt className="text-4xl m-2 text-blue-500" /> 
           <p className="lg:text-2xl text-md lg:m-3 m-1 font-bold">
-            <a href="tel:+919496225620">+91 9496225620</a><br></br>
-            <a href="tel:+919496225623">+91 9496225623</a>
+            <a href="tel:+919496225620">+91 8078945212</a><br></br>
+            <a href="tel:+919496225623">+91 8590443930</a>
           </p>
           </div>
         </div>
