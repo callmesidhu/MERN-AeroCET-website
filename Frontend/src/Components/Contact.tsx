@@ -58,7 +58,7 @@ export default function Contact() {
         <h2>SUPPORT US IN THE UPCOMING SAE <br />Competitions!</h2>
         <button
          onClick={() => {
-          window.location.href = 'http://localhost:3001/db/data';
+          window.location.href = `${import.meta.env.VITE_API_URL}/db/data`;
         }}
         >
           <img src={download} alt="Loader-image" className="loader-image h-18 my-4" />

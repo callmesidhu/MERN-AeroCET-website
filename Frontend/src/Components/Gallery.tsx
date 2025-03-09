@@ -17,7 +17,7 @@ export default function Gallery() {
 
   // Intersection Observer logic
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/data`)
+    axios.get(`${import.meta.env.VITE_API_URL}/api/data`)
       .then((response) => {
         console.log(response.data.images); // Check if URLs are correct
         setImages(response.data.images); // Store the fetched image URLs
