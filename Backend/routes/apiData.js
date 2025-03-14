@@ -1,24 +1,23 @@
+// routes/apiData.js
 const express = require('express');
-const cloudinary = require('../config/apiconnection'); 
-
 const router = express.Router();
+const cloudinary = require('../config/apiconnection');
 
 router.get('/data', async (req, res) => {
   try {
-    // Use the Cloudinary API to fetch resources
     const result = await cloudinary.api.resources({
-      type: 'upload', // Only include uploaded resources
-      prefix: '',     // Optional: Add folder name if images are stored in a specific folder
-      max_results: 50 // Optional: Limit the number of results
+      type: 'upload',
+      prefix: '',  // Adjust the prefix as needed
+      max_results: 50
     });
 
-    // Extract the URLs of the images
-    const images = result.resources.map((resource) => resource.secure_url);
+    console.log('Cloudinary Response:', result);
 
-    res.json({ images }); // Send the image URLs as JSON
+    const images = result.resources.map((resource) => resource.secure_url);
+    res.json({ images });
   } catch (error) {
-    console.error('Error fetching images from Cloudinary:', error);
-    res.status(500).json({ error: 'Failed to fetch images' });
+    console.error('Error fetching images:', error);
+    res.status(500).json({ error: 'Failed to fetch images', details: error.message });
   }
 });
 
