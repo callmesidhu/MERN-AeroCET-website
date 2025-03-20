@@ -1,0 +1,15 @@
+[
+        {
+                "id":1,
+                "heading":"Teachnical Team Recruitment Results",
+                "message":"comming soon",
+                "link":"http://aero.cet.ac.in",
+                "excel":"../../Data/annoucements/1.xlxs"
+        }
+        ,{
+                "id":2,
+                "heading":"Management Team Recruitment Results",
+                "message":"comming soon",
+                "link":"http://aero.cet.ac.in"
+        }
+]
