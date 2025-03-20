@@ -1,0 +1,67 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  width: 100vw;
+  min-width: 100vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  color: white; /* This will make the text stand out on the background colors */
+
+}
+
+.home{
+  display: flex;
+  overflow-x: hidden;
+
+ 
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 2px;
+  
+  
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0); 
+  border-radius: 20px;
+  
+  
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #ff7300 ; 
+  border-radius: 20px;
+  cursor: grab;
+  
+  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d45500 ; 
+  transition-duration: 10s;
+
+}
+.divbg{
+          
+                    
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/introBG.png);
+  
+  position: relative;
+  min-width: 100vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
+        
+}

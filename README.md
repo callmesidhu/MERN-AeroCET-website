@@ -1,2 +1,1 @@
-# Frontend : React(TypeScript) 
-# Backend : Nodejs + Mongodb 
+# React (TypeScript)

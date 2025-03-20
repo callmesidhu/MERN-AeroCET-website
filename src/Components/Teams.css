@@ -1,0 +1,11 @@
+@font-face {
+        font-family: 'Avenger';
+        src: url('../assets/fonts/Avenger.ttf') format('truetype'); 
+        font-weight: 1000;
+        font-style: normal;
+      }
+      
+.aven {
+        font-family: 'Avenger', sans-serif;
+        text-shadow: 0px 0px 20px #FF6A00;
+      }
