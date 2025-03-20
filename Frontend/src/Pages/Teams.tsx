@@ -75,7 +75,7 @@ export default function Teams() {
               { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out': isActive } // Visible state
             )}
           >
-            <img src={member.imgURL || logo} className="rounded-lg h-32 w-32 sm:h-48 sm:w-48 object-cover" alt={member.name} />
+            <img src={member.imgURL || logo} className="rounded-lg  w-full max-w-[150px] sm:max-w-[200px] object-cover" alt={member.name} />
             <h2 className="text-lg font-semibold text-orange-500 text-center mt-2">{member.name}</h2>
             <p className="text-white text-center text-sm">{member.role}</p>
           </div>

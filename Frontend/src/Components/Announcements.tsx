@@ -63,14 +63,14 @@ export default function Achievements() {
           <div
             key={index}
             className={clsx(
-              'flex flex-col lg:flex-row justify-evenly px-8 py-6 rounded-md w-full bg-gray-200 shadow-lg   text-gray-800 shadow-orange-600',
+              'flex flex-col lg:flex-row justify-evenly px-8 lg:px-20 py-6 rounded-md w-full bg-gray-200 shadow-lg   text-gray-800 shadow-orange-600',
               'transition-all duration-500 ease-in-out',
               { 'opacity-0 translate-y-8': !isActive },
               { 'opacity-100 translate-y-0 delay-700': isActive }
             )}
           >
-            <div className='justify-start'>
-            <h2 className="text-2xl font-bold mb-2">{item.heading}</h2>
+            <div className='justify-center  w-full'>
+            <h2 className="text-2xl font-bold mb-2 lg:whitespace-nowrap">{item.heading}</h2>
             <p className="text-lg mb-4">{item.message}</p>
                 </div>
           <button className='bg-orange-600 rounded-3xl px-10'>

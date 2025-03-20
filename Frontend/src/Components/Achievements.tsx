@@ -56,26 +56,26 @@ export default function Achievements() {
       </h1>
 
       {/* Image */}
-      <div className='flex flex-row gap-3'>
-      {[...achivements].reverse().map((item, index) => (
-          <div
-            key={index}
-        className={clsx(
-          "flex-1 flex justify-center items-center ",
-          "transition-all duration-500 ease-in-out",
-          { 'opacity-0 translate-y-8': !isActive },
-          { 'opacity-100 translate-y-0 delay-700': isActive }
-        )}
-      >
-        
-        <img
-          src={item.image}
-          alt="Coming Soon"
-          className="rounded-xl h-96 shadow-lg"
-        />
-      </div>
-      ))}
-      </div>
+      <div className="flex flex-wrap md:flex-row overflow-auto flex-col gap-3">
+  {[...achivements].reverse().map((item, index) => (
+    <div
+      key={index}
+      className={clsx(
+        "flex-1 flex justify-center items-center min-w-0",
+        "transition-all duration-500 ease-in-out",
+        { 'opacity-0 translate-y-8': !isActive },
+        { 'opacity-100 translate-y-0 delay-700': isActive }
+      )}
+    >
+      <img
+        src={item.image}
+        alt="Coming Soon"
+        className="rounded-xl w-full max-h-96 object-cover shadow-lg"
+      />
+    </div>
+  ))}
+</div>
+
     </div>
   );
 }
