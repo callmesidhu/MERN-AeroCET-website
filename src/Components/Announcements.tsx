@@ -1,12 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router-dom';
-import announcements from '../../Data/announcements.json';
+
 
 export default function Achievements() {
   const [isActive, setIsActive] = useState(false);
   const teamRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
+  const announcements = [
+    { id: 1, heading: 'Announcement 1', message: 'Message 1', link: 'https://example.com', excel: 'file1.xlsx' },
+    { id: 2, heading: 'Announcement 2', message: 'Message 2', link: 'https://example.com' },
+    // Add more announcements as needed
+  ];
 
   const goTo = () => {
     navigate('/');
@@ -31,6 +36,22 @@ export default function Achievements() {
       }
     };
   }, []);
+
+  // Function to handle button click
+  const handleClick = (item: { id: number; heading: string; message: string; link: string; excel: string; } | { id: number; heading: string; message: string; link: string; excel?: undefined; }) => {
+    if (item.excel) {
+      // Trigger file download
+      const link = document.createElement('a');
+      link.href = item.excel; // Assuming it's a relative path
+      link.download = item.excel?.split('/').pop() || ''; // Extract filename
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      // Navigate to the link
+      window.open(item.link, '_blank');
+    }
+  };
 
   return (
     <div
@@ -63,26 +84,22 @@ export default function Achievements() {
           <div
             key={index}
             className={clsx(
-              'flex flex-col lg:flex-row justify-evenly px-8 py-6 rounded-md w-full bg-gray-200 shadow-lg   text-gray-800 shadow-orange-600',
+              'flex flex-col lg:flex-row justify-evenly px-8 lg:px-20 py-6 rounded-md w-full bg-gray-200 shadow-lg text-gray-800 shadow-orange-600',
               'transition-all duration-500 ease-in-out',
               { 'opacity-0 translate-y-8': !isActive },
               { 'opacity-100 translate-y-0 delay-700': isActive }
             )}
           >
-            <div className='justify-start'>
-            <h2 className="text-2xl font-bold mb-2">{item.heading}</h2>
-            <p className="text-lg mb-4">{item.message}</p>
-                </div>
-          <button className='bg-orange-600 rounded-3xl px-10'>
-          <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-orange-950 font-extrabold"
+            <div className="justify-center w-full">
+              <h2 className="text-2xl font-bold mb-2 lg:whitespace-nowrap">{item.heading}</h2>
+              <p className="text-lg mb-4">{item.message}</p>
+            </div>
+            <button
+              className="bg-orange-600 rounded-3xl px-10 py-2 lg:w-full lg:max-w-64 text-center text-white font-extrabold hover:bg-orange-700"
+              onClick={() => handleClick(item)}
             >
-              Check Out
-            </a>
-          </button>
+              {item.excel ? 'Download' : 'Check'}
+            </button>
           </div>
         ))}
       </div>

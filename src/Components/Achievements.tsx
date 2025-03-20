@@ -1,13 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router-dom';
-import achivements from '../../Data/achivements.json';
+
 
 
 export default function Achievements() {
   const [isActive, setIsActive] = useState(false);
   const teamRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
+  const achivements = [
+    { image: 'path/to/image1.jpg' },
+    { image: 'path/to/image2.jpg' },
+    // Add more achievements as needed
+  ];
 
   const goTo = () => {
     navigate('/');
@@ -56,26 +61,26 @@ export default function Achievements() {
       </h1>
 
       {/* Image */}
-      <div className='flex flex-row gap-3'>
-      {[...achivements].reverse().map((item, index) => (
-          <div
-            key={index}
-        className={clsx(
-          "flex-1 flex justify-center items-center ",
-          "transition-all duration-500 ease-in-out",
-          { 'opacity-0 translate-y-8': !isActive },
-          { 'opacity-100 translate-y-0 delay-700': isActive }
-        )}
-      >
-        
-        <img
-          src={item.image}
-          alt="Coming Soon"
-          className="rounded-xl h-96 shadow-lg"
-        />
-      </div>
-      ))}
-      </div>
+      <div className="flex flex-wrap md:flex-row overflow-auto flex-col gap-3">
+  {[...achivements].reverse().map((item, index) => (
+    <div
+      key={index}
+      className={clsx(
+        "flex-1 flex justify-center items-center min-w-0",
+        "transition-all duration-500 ease-in-out",
+        { 'opacity-0 translate-y-8': !isActive },
+        { 'opacity-100 translate-y-0 delay-700': isActive }
+      )}
+    >
+      <img
+        src={item.image}
+        alt="Coming Soon"
+        className="rounded-xl w-full max-h-96 object-cover shadow-lg"
+      />
+    </div>
+  ))}
+</div>
+
     </div>
   );
 }

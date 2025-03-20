@@ -47,7 +47,7 @@ export default function About() {
         )}>
           <iframe
             className="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
-            src="https://www.youtube.com/embed/Zrt77f7nTqY?autoplay=1&mute=1&loop=1&controls=0&playlist=Zrt77f7nTqY"
+            src="https://www.youtube.com/embed/Y4MHRyifuYY?autoplay=1&mute=1&loop=1&controls=0&playlist=Y4MHRyifuYY"
             title="About Video"
             frameBorder="0"
             allow="autoplay; encrypted-media"
@@ -55,8 +55,12 @@ export default function About() {
           ></iframe>
         </div>
         <p className="text-base md:text-lg lg:text-xl mb-6">
-        Started by aeromodelling enthusiasts of College of Engineering, Trivandrum, the official club continues to grow in aircraft design, analysis, and fabrication. We constantly explore new avenues of aero-modelling through competitions such as SAE ISS DDC, SAE ISS ADDC, Tathva NIT, Conscientia IIST and research  related to autonomous drone, fixed-wing UAVs and thereby VTOL (vertical take-off and landing) to expand our skills.
-        </p>
+Our Mission:
+
+- Develop innovative unmanned aerial systems (UAS) and advanced aeromodelling technologies
+- Provide hands-on aerospace experience to students
+- Bridge academics with real-world applications through research, industry collaboration and competitions.
+- Inspire and nurture future aerospace engineers        </p>
       </div>
     </div>
   );

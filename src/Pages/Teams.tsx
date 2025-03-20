@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import logo from '../assets/AeroCET-logo.png';
-import people from '../../Data/execom.json';
+
 import { useState, useEffect, useRef } from 'react';
 import clsx from 'clsx';
 
@@ -32,6 +32,12 @@ export default function Teams() {
       }
     };
   }, []);
+
+  const people = [
+    { id: 1, name: 'Comming Soon', role: 'Developer', imgURL: 'path/to/image1.jpg' },
+    { id: 2, name: 'Comming Soon', role: 'Designer', imgURL: 'path/to/image2.jpg' },
+    // Add more team members as needed
+  ];
 
   return (
     <div ref={teamsRef} className="p-3 lg:p-8 relative flex flex-col items-center h-full max-h-screen overflow-y-auto">
@@ -75,7 +81,7 @@ export default function Teams() {
               { 'opacity-100 translate-y-0 transition-all duration-700 ease-in-out': isActive } // Visible state
             )}
           >
-            <img src={member.imgURL || logo} className="rounded-lg h-32 w-32 sm:h-48 sm:w-48 object-cover" alt={member.name} />
+            <img src={member.imgURL || logo} className="rounded-lg  w-full max-w-[150px] sm:max-w-[200px] object-cover" alt={member.name} />
             <h2 className="text-lg font-semibold text-orange-500 text-center mt-2">{member.name}</h2>
             <p className="text-white text-center text-sm">{member.role}</p>
           </div>
